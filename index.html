@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A high-performance HTML5 Canvas collection game." />
+  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  
+  <title>Star Collector: Canvas Game</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="script.js" as="script" />
+</head>
+<body>
+  
+  <header>
+    <h1 class="visually-hidden">Star Collector Game</h1>
+  </header>
+
+  <main>
+    <div id="gameWrap" aria-label="Game container">
+      <canvas id="gameCanvas" width="800" height="600" tabindex="0" aria-label="Game Board. Use WASD or Arrow Keys to move.">
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
+    </div>
+  </main>
+
+  <footer>
+    <p id="ui-instructions" aria-live="polite">Score: 0 | Use Arrow Keys to Move</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
