@@ -1,0 +1,76 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #0b1020 0%, #1a1f3a 60%, #0b1020 100%);
+  --accent-color: #4cc9f0;
+  --text-color: #ffffff;
+  --canvas-border: rgba(255, 255, 255, 0.9);
+}
+
+/* Reset basics */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent scrollbars during game play */
+}
+
+/* Utility class for accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+#gameWrap {
+  /* Performance: Use simpler width calculation */
+  width: 92%;
+  max-width: 900px;
+  aspect-ratio: 4 / 3;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #000;
+  border: 2px solid var(--canvas-border);
+  border-radius: 8px;
+  outline: none; /* Focus handled by JS/Game state visual */
+}
+
+canvas:focus {
+  box-shadow: 0 0 0 4px rgba(76, 201, 240, 0.5);
+}
+
+footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
